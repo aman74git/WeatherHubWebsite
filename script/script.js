@@ -126,7 +126,7 @@ function updateUI(error, weatherObj, aqi, weekWeatherList, city, state) {
 function addFetchingMsg() {
   document.body.insertAdjacentHTML(
     'afterbegin',
-    `<div class="fetching-msgs alert alert-light fade show my-0" role="alert"><div class="container-lg"><strong>Fetching Weather...</strong></div></div>`
+    `<div class="fetching-msgs alert alert-secondary fade show my-0" role="alert"><div class="container-lg"><strong>Fetching Weather...</strong></div></div>`
   );
   setTimeout(window.scrollTo(0, 0), 200);
 }
