@@ -115,9 +115,19 @@
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.03);
 }
 
+@media screen and (max-width: 991px){
+  #temperature {
+    font-size: 3.8rem;
+  }
+} 
+
+
 @media screen and (max-width: 767px) {
   #wt-start {
     border-radius: 0 0 1rem 1rem;
+  }
+  #temperature {
+    font-size: 4rem;
   }
   .highlight-card h5 {
     font-size: 0.8rem;
@@ -134,8 +144,20 @@
 }
 
 @media screen and (max-width: 575px) {
+  #temperature {
+    font-size: 4.25rem;
+  }
   .week-day-card {
     font-size: 0.7rem;
     border-radius: 0.6rem;
+  }
+  /* .highlight-card .highlight-value {
+    font-size: 2.25rem;
+  }
+  .highlight-card .highlight-unit {
+    font-size: 0.8rem;
+  } */
+  .sun-values{
+    font-size: 1.05rem;
   }
 }
