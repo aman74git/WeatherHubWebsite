@@ -38,6 +38,7 @@ function updateUI(error, weatherObj, aqi, weekWeatherList, city, state) {
 
   let { temp, pressure, humidity, feels_like } = weatherObj.main;
 
+  temp = Math.round((temp + Number.EPSILON) * 10) / 10;
   mainTempBox.innerHTML = `${temp}`;
   feelsLikeTempBox.innerHTML = `${feels_like}`;
 
@@ -181,7 +182,7 @@ function updateTemp(tempUnit, fromUnit) {
     let newValue;
     if (tempUnit == 'degC') newValue = ((prevValue - 32) * 5) / 9;
     else newValue = prevValue * 1.8 + 32;
-    newValue = Math.round((newValue + Number.EPSILON) * 100) / 100;
+    newValue = Math.round((newValue + Number.EPSILON) * 10) / 10;
     box.innerHTML = `${newValue}`;
   });
 
